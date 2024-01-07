@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+</head>
+<body>
+
+    <h1>All Posts</h1>
+
+    <ul>
+        <!-- Thymeleaf iteration to loop through the posts -->
+        <li th:each="post : ${posts}">
+            <a th:href="@{'/posts/' + ${post.id}}">
+                <h2 th:text="${post.title}"></h2>
+            </a>
+            <p th:text="${post.content}"></p>
+            <hr>
+        </li>
+    </ul>
+
+</body>
+</html>

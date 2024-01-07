@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+</head>
+<body>
+
+    <!-- Check if the post exists -->
+    <div th:if="${post}">
+        <h1 th:text="${post.title}"></h1>
+        <p th:text="${post.content}"></p>
+    </div>
+    <!-- Display a message if the post does not exist -->
+    <div th:unless="${post}">
+        <p>Post not found!</p>
+    </div>
+
+</body>
+</html>
